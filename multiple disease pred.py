@@ -13,8 +13,8 @@ Parkinsons_model = pickle.load(open('B:\VSCODE\Multiple Disease Prediction Syste
 # Sidebar for navigation
 with st.sidebar:
 
-    selected = option_menu("Multiple Disease Prediction", ["Diabetes Prediction", "Heart Disease Prediction", "Parkinsons Prediction"], 
-                           icons= ['activity','heart-pulse','person-fill'],
+    selected = option_menu("Multiple Disease Prediction", ["Heart Disease Prediction","Diabetes Prediction", "Parkinsons Prediction"], 
+                           icons= ['heart-pulse','activity','person-fill'],
                             default_index=0)
 
 
