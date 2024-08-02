@@ -10,12 +10,35 @@ Heart_Disease_model = pickle.load(open('B:\VSCODE\Multiple Disease Prediction Sy
 Parkinsons_model = pickle.load(open('B:\VSCODE\Multiple Disease Prediction System\Multiple Disease Prediction System\Saved Model\parkinsons_model.sav'  , 'rb'))
 
 
+import streamlit as st
+from streamlit_option_menu import option_menu
+
+# Custom CSS to style the selected item in the option menu
+st.markdown(
+    """
+    <style>
+    .option-menu-item-selected {
+        background-color: #FF6347 !important;  /* Change this color to your desired color */
+        color: white !important;  /* Change this color to your desired text color */
+         font-weight: bold !important;  /* Make the text bold */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Sidebar for navigation
 with st.sidebar:
-
-    selected = option_menu("Multiple Disease Prediction", ["Heart Disease Prediction","Diabetes Prediction", "Parkinsons Prediction"], 
-                           icons= ['heart-pulse','activity','person-fill'],
-                            default_index=0)
+    selected = option_menu("Multiple Disease Prediction", 
+                           ["Heart Disease Prediction", "Diabetes Prediction", "Parkinsons Prediction"], 
+                           icons=['heart-pulse', 'activity', 'person-fill'], 
+                           default_index=0,
+                           styles={
+                               "container": {"padding": "5!important", "background-color": "#6747A8"},
+                               "icon": {"color": "red", "font-size": "25px"}, 
+                               "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#A61E4C"},
+                               "nav-link-selected": {"background-color": "#6747A8", "color": "#D98DA8", "font-weight": "bold"},  # Change colors here as well
+                           })
 
 
 # Diabetes Prediction Page
