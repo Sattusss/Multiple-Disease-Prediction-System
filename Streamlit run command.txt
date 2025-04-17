@@ -1,1 +1,1 @@
-streamlit run "B:\VSCODE\Multiple Disease Prediction System\Multiple Disease Prediction System\multiple disease pred.py"
+streamlit run "B:\VSCODE\Multiple Disease Prediction System\Multiple Disease Prediction System\app.py"

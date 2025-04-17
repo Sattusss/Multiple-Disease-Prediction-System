@@ -13,7 +13,6 @@ Parkinsons_model = pickle.load(open('B:\VSCODE\Multiple Disease Prediction Syste
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# Center-align the title
 st.markdown(
     """
     <div style="text-align: center;">
@@ -23,14 +22,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Custom CSS to style the selected item in the option menu
 st.markdown(
     """
     <style>3
     .option-menu-item-selected {
-        background-color: #FF6347 !important;  /* Change this color to your desired color */
-        color: white !important;  /* Change this color to your desired text color */
-        font-weight: bold !important;  /* Make the text bold */
+        background-color: #FF6347 !important;  
+        color: white !important;  
+        font-weight: bold !important;  
     }
     </style>
     """,
